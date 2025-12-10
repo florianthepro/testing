@@ -1,4 +1,5 @@
 👉 [web](https://florianthepro.github.io/testing/)
+
 # testing
 
 <div id="reverse-me">
@@ -15,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!container) return;
   const lines = Array.from(container.querySelectorAll('p'))
     .map(p => p.textContent.trim())
-    .filter(l => l.length > 0)
     .reverse();
   container.innerHTML = lines.map(l => `<p>${l}</p>`).join('');
 });
