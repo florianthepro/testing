@@ -20,29 +20,6 @@ Zeile 4
 # testing
 
 <div id="reverse-me">
-
-Zeile 1
-Zeile 2
-Zeile 3
-Zeile 4
-
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.getElementById('reverse-me');
-  if (!container) return;
-  const lines = container.textContent
-    .split(/\r?\n/)
-    .map(l => l.trim())
-    .filter(l => l.length > 0)
-    .reverse();
-  container.innerHTML = lines.join('<br>');
-});
-</script>
-# testing
-
-<div id="reverse-me">
 <p>Zeile 1</p>
 <p>Zeile 2</p>
 <p>Zeile 3</p>
