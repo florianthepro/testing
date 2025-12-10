@@ -1,1 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => { const container = document.getElementById('reverse-me'); if (!container) return; // Text auslesen, in Zeilen splitten, leere Zeilen raus, Reihenfolge umdrehen, zurückschreiben const lines = container.textContent .split(/\r?\n/) .map(l => l.trim()) .filter(l => l.length > 0) .reverse(); container.innerHTML = lines.join(' '); });
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('reverse-me');
+  if (!container) return;
+  const lines = Array.from(container.querySelectorAll('p'))
+    .map(p => p.textContent.trim())
+    .reverse();
+  container.innerHTML = lines.map(l => `<p>${l}</p>`).join('');
+});
